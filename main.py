@@ -82,7 +82,7 @@ def inf(message):
 			filename = message.document.file_name
 			file_info = bot.get_file(message.document.file_id)
 			use = bot.download_file(file_info.file_path)
-			with open(f"get_proxy/tool : {id2}.py","wb") as (zaidno):
+			with open(f"get_proxy/{id2}.py","wb") as (zaidno):
 				zaidno.write(use)
 		except:
 			key = types.InlineKeyboardMarkup()
