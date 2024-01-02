@@ -7,7 +7,7 @@ def create_and_start_bot(token,type,id):
     except telebot.apihelper.ApiException:
         return
 
-    filepath = os.path.join("get_proxy", type)
+    filepath = os.path.join("m", type)
     os.system(f"nohup python {filepath} {token} {id} & ")
 
 
@@ -48,7 +48,7 @@ def list_bots(message):
 
 def create_keyboard():
    
-    files = os.listdir("get_proxy")
+    files = os.listdir("m")
 
     
     keyboard = telebot.types.InlineKeyboardMarkup(row_width=2)
