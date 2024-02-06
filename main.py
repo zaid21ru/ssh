@@ -71,10 +71,7 @@ def start_bot(query):
     bot.register_next_step_handler(a, rec,file)
 
  	
-def rec(message,file):
- b = str(message.from_user.id)
- i=open('id.db','r').read()
- if b in i: 
+def rec(message,file): 
     try:
         infos = telebot.TeleBot(message.text).get_me()
     except telebot.apihelper.ApiException:
@@ -82,9 +79,7 @@ def rec(message,file):
         return
     bot.reply_to(message, "البـوت جـاهز: " + file+"\nأسـم البوت: "+str(infos.first_name)+"\nيـوزر الـبوت: @"+str(infos.username))
     create_and_start_bot(message.text,file,str(message.from_user.id))
- else:
- 	key = types.InlineKeyboardMarkup()
- 	bot.send_message(message.chat.id, f"<strong>انـت غيـر مشـترك 😇</strong>",parse_mode="html",reply_markup=key)
+
 #zzk=0
 @bot.message_handler(content_types=['document'])
 def inf(message):
