@@ -1303,16 +1303,6 @@ import secrets
 from telebot import types
 cokie  = secrets.token_hex(8)*2
 ya=0;no=0;nod=0;yas=0;em=0
-zaidip = socket.gethostname()
-ipzaid = socket.gethostbyname(zaidip)
-url_ip = requests.get('https://pastebin.com/iXNMindq').text
-if ipzaid in url_ip:
-	os.system('clear')
-else :
-	os.system('clear')
-	print(f'{S} OF The Tools Programmer Zaid ')
-	print(f' {F}@P_W_7 ')
-	exit()
 	
 try:
 	sessionid="{}".format(str(secrets.token_hex(8) * 2))
