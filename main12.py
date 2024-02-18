@@ -1316,8 +1316,8 @@ except:
 
 os.system('clear')						
 
-ID= '5949387072'
-tok= '6730328505:AAGfzfvNZDVGhZG6IgxigB3G00oHg9w18Pk'
+ID= '6644072164'
+tok= '6910434128:AAE_RTqh0H-LrNYejGNDhW6Gpsa9Qd9DUmc'
 ugen,viv=[],[]
 for xd in range(10000):
     a='Nokia'
