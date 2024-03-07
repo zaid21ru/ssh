@@ -2756,7 +2756,7 @@ def k1(message,id):
 				os.system('cls'if os.name=='net'else'clear')
 				print(f'{X}Tools hit Instagram\n\033[2;36m═══════════════════════════\n\033[2;36m 1 - \033[1;34mDones Email : \033[2;36m{y1}\n \033[2;36m2 - \033[1;33mError Email : \033[2;36m{n1}\n\033[2;36m 3 -\033[1;31m Error Gmail : \033[2;36m{xy}\n\033[2;36m 4 -\033[2;32m Dones Gmail : \033[2;36m{zy1}\n\033[2;36m 5 - Check Email : \033[2;36m{email}\n\033[2;36m═══════════════════════════\n  \033[1;33mProgrammer \033[2;32m@P_W_7 ')	
 				try:
-					rr = requests.post(f'https://hotmaill-f9e6a52eee88.herokuapp.com/zaid/?email={email}').text
+					rr = requests.post(f'https://hotmaill-1caf710aeb72.herokuapp.com/zaid/?email={email}').text
 				except:
 					continue 
 				if 'good' in rr:
